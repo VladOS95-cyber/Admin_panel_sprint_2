@@ -1,17 +1,18 @@
-from dotenv import dotenv_values
+import os
 from pathlib import Path
 
+from dotenv import dotenv_values
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 env_config = dotenv_values(".env")
 
 
-SECRET_KEY = env_config["SECRET_KEY"]
+SECRET_KEY = "django-insecure-byyt+43cvs!9@69r(t4rkbppi9h4be3jsgqa6_u@i$9hyv4e+2"
 
 DEBUG = False
 
-ALLOWED_HOSTS = [env_config["ALLOWED_HOSTS"]]
+ALLOWED_HOSTS = "*"
 
 
 INSTALLED_APPS = [
@@ -61,9 +62,8 @@ DATABASES = {
         "NAME": env_config["DB_NAME"],
         "USER": env_config["DB_USER"],
         "PASSWORD": env_config["DB_PASSWORD"],
-        "HOST": "localhost",
-        "PORT": 5432,
-        "OPTIONS": {"options": "-c search_path=content"},
+        "HOST": env_config["HOST"],
+        "PORT": env_config["PORT"],
     }
 }
 
@@ -96,6 +96,10 @@ USE_TZ = True
 
 
 STATIC_URL = "/static/"
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
+
+MEDIA_URL = "/media/"
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"

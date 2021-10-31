@@ -1,6 +1,6 @@
 import uuid
 
-from django.core.validators import MinValueValidator, MaxValueValidator
+from django.core.validators import MaxValueValidator, MinValueValidator
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 
@@ -90,7 +90,7 @@ class Filmwork(TimeStampedModel):
         blank=True,
     )
     type = models.CharField(_("type"), max_length=20, choices=FilmworkType.choices)
-    genres = models.ManyToManyField(Genre, through="FilmworkGenre")
+    film_genres = models.ManyToManyField(Genre, through="FilmworkGenre")
     persons = models.ManyToManyField(Person, through="PersonFilmWork")
 
     class Meta:

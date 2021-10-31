@@ -53,3 +53,5 @@ log/
 
 # auto generated docs
 doc.html
+
+postgres_data/
