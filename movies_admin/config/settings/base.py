@@ -10,7 +10,7 @@ env_config = dotenv_values(".env")
 
 SECRET_KEY = "django-insecure-byyt+43cvs!9@69r(t4rkbppi9h4be3jsgqa6_u@i$9hyv4e+2"
 
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = "*"
 
