@@ -64,6 +64,9 @@ DATABASES = {
         "PASSWORD": env_config["DB_PASSWORD"],
         "HOST": env_config["HOST"],
         "PORT": env_config["PORT"],
+        'OPTIONS': {
+           'options': '-c search_path=content'
+        }
     }
 }
 
