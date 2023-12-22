@@ -23,6 +23,6 @@ pip install -r requirements.txt.
 ![all](images/all.png)
 
 
-Project author: Владислав Бронзов
+Project author: Vladislav Bronzov
 
 Email: vladislav.bronzov@gmail.com
