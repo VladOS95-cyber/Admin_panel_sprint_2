@@ -1,7 +1,7 @@
 ## Admin panel service 
 
 ## Description
-Administration panel API to manipulate with db and list of films creation logic.
+Administration panel API to manipulate the database and films creation logic.
 
 
 ## Instructions
